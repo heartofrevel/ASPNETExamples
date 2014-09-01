@@ -1,0 +1,350 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dune5.DateTimeUI</name>
+    </assembly>
+    <members>
+        <member name="T:Dune5.DateTimeUI.Resources">
+            <summary>
+            Centralise access to resources
+            </summary>
+        </member>
+        <member name="M:Dune5.DateTimeUI.WebUtility.EncodeDateForJavascript(System.DateTime)">
+            <summary>
+            Converts a date to a JavaScript date string in UTC format
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Dune5.DateTimeUI.DateTimeFormat">
+            <summary>
+            A class to represent the parsed format of the DisplayFormat as a collection of type DateTimeFormatElement
+            </summary>
+        </member>
+        <member name="M:Dune5.DateTimeUI.DateTimeFormat.IsDateTimeCharacter(System.Char)">
+            <summary>
+            Indicates whether the character is a yMmdHht or s character.
+            </summary>
+            <param name="aChar">The datetime format character to test</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dune5.DateTimeUI.DateTimeFormat.InitialiseFormatFromString(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Initialises the Display Format from a format string of length greater than one.
+            </summary>
+            <param name="a_DisplayFormat"></param>
+        </member>
+        <member name="M:Dune5.DateTimeUI.DateTimeFormat.ValidateFormatForDateTimePicker(System.String)">
+            <summary>
+            Validates whether the parsed DisplayFormat is valid, and does not contain any inconsistencies. Eg, day occurring in two places for en-US and D 
+            </summary>
+        </member>
+        <member name="T:Dune5.DateTimeUI.DateTimeElementDisplayFormat">
+            <summary>
+            An enumeration to represent the format of a part of a date time value.
+            </summary>
+        </member>
+        <member name="T:Dune5.DateTimeUI.DateTimeElementType">
+            <summary>
+            An enumeration to represent a part of a date time value.
+            </summary>
+        </member>
+        <member name="T:Dune5.DateTimeUI.DesignValue">
+            <summary>
+            A class to represent an abbreviation and description for a string property value. For use at DesignTime to provide suggestions for string properties.
+            </summary>
+        </member>
+        <member name="M:Dune5.DateTimeUI.JDatePicker.RenderControl(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:Dune5.DateTimeUI.JDatePicker.SelectedValueDataBinding">
+            <summary>
+            Use this property for databinding purposes. It is the equivalent to the SelectedValue, boxed in object, with robust parsing in the Setter."
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.JDatePicker.SelectedValue">
+            <summary>
+            Gets or sets the currently selected date.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.JDatePicker.Culture">
+            <summary>        
+            The Culture being used by the control. Leave blank to use the Culture of the currently executing thread. The Culture affects how the default display formats 'd' and 'D' are rendered, as well as month names, etc. Neutral and incorrect culture names are ignored.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Dune5.DateTimeUI.JDatePicker.PopupMode">
+            <summary>
+            Determines how the datepicking option is activated
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.JDatePicker.PopupImage">
+            <summary>
+            Url to a calendar image or leave blank to use the default resource image. Application relative paths eg '~/img/calendar.gif' are supported. Applies only if PopupMode = ImageButton
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.JDatePicker.CSSURL">
+            <summary>
+            This property works in 3 ways.
+            If left blank it is assumed that a static reference to a CSS file is included in the page.
+            If the value is 'embedded' then the control will render a reference to a default stylesheet embedded in assembly resources. This is the default.
+            If a URL is specified to a CSS file then the control will emit this into the page. The URL can be application relative eg '~/css/datepicker.css'
+            Find CSS themes at http://jqueryui.com/themeroller/#themeGallery. One can reference JQuery themes at Google, eg. http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css
+            This property is Themeable.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.JDatePicker.JQueryUIURL">
+            <summary>
+            Location of jQueryUI-1.7.2 .js file. Not relevant unless JQueryLoading=SpecifiedJSScriptURL. Supports application relative paths eg. ~/scripts/jQueryUI-1.7.2.js
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.JDatePicker.JQueryURL">
+            <summary>
+            Location of jQuery-1.3.2 .js file. Not relevant unless JQueryLoading=SpecifiedJSScriptURL. Default is empty string. 
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.JDatePicker.MinDate">
+            <summary>
+            Minumum allowable date. Leave blank to allow any date
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.JDatePicker.MaxDate">
+            <summary>
+            Maximum allowable date. Leave blank to allow any date.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.JDatePicker.NumberOfMonths">
+            <summary>
+            Set the NumberOfMonths property to an integer of 2 or more to show multiple months in a single datepicker.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.JDatePicker.OnClientSelect">
+            <summary>
+            Client event handler fired when a date is selected
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.JDatePicker.PopupText">
+            <summary>
+            If PopupMode is ImageButton then this is the tooltip text that is displayed when the mouse hovers over the popup image. If PopupMode is Button then this is the text displaued on the button.
+            </summary>
+        </member>
+        <member name="T:Dune5.DateTimeUI.DateTimePicker">
+            <summary>
+            Dune5.DateTimeUI.DateTimePicker is a Date and/or Time picker web control that renders itself as HTML drop down lists.
+            </summary>
+        </member>
+        <member name="M:Dune5.DateTimeUI.DateTimePicker.#ctor">
+            <summary>
+            Default Class Constructor
+            </summary>
+        </member>
+        <member name="M:Dune5.DateTimeUI.DateTimePicker.SetNull">
+            <summary>
+            Sets the DateTimePicker control to have no underlying DateTime value. Causes AllowNullValue to be set to true if it is not. Equivalent to setting SelectedValue to null.
+            </summary>
+        </member>
+        <member name="M:Dune5.DateTimeUI.DateTimePicker.LoadPostData(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Implementation of IPostBackDataHandler. Sets the control instance value from the postCollection. This method is used by the ASP.Net page framework and is not intended to be used from your code.
+            </summary>
+            <param name="postDataKey"></param>
+            <param name="postCollection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dune5.DateTimeUI.DateTimePicker.IsValueEqualForCurrentFormat(System.Nullable{System.DateTime})">
+            <summary>
+            Compares this.SelectedValue and otherValue only for elements in current display format...
+            </summary>
+            <param name="otherValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Dune5.DateTimeUI.DateTimePicker.RaisePostDataChangedEvent">
+            <summary>
+            (Implementation of IPostBackDataHandler) The ValueChanged event is raised if SelectedValue has changed.
+            </summary>
+        </member>
+        <member name="M:Dune5.DateTimeUI.DateTimePicker.OnValueChanged(Dune5.DateTimeUI.DateTimePicker.ValueChangedEventArgs)">
+            <summary>
+            Raises the ValueChanged event.
+            </summary>
+            <param name="e">The Dune5.DateTimeUI.DateTimePicker.ValueChangedEventArgs paramenter containing the old and new values.</param>
+        </member>
+        <member name="M:Dune5.DateTimeUI.DateTimePicker.RenderBeginTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the opening HTML tags of the DateTimePicker control. This method is primarily used by control developers.
+            </summary>
+            <param name="output">The HTMLTextwriter to write to</param>
+        </member>
+        <member name="M:Dune5.DateTimeUI.DateTimePicker.RenderEndTag(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the closing HTML tags of the DateTimePicker control. This method is primarily used by control developers.
+            </summary>
+            <param name="output">The HTMLTextwriter to write to</param>
+        </member>
+        <member name="M:Dune5.DateTimeUI.DateTimePicker.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the DateTimePicker control into the specified writer.
+            </summary>
+            <param name="output">The HTMLTextwriter to write to</param>
+        </member>
+        <member name="E:Dune5.DateTimeUI.DateTimePicker.ValueChanged">
+            <summary>
+            Occurs when the DateTime SelectedValue of the control is changed upon server postback. 
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.AllowNullValue">
+            <summary>
+            Gets or sets a boolean flag indicating whether the control should allow no Datetime to be selected. If AllowNullValue is true, the control allows the user to not select a specific DateTime, by including blank (--) picker options. 
+            Default value : FALSE.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.AutoPostBack">
+            <summary>
+            Gets or sets a boolean flag indicating whether the control should automatically post back if the date or time is changed.
+            Default value : FALSE
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.IsEditable">
+            <summary>
+            Gets or sets a boolean value indicating whether the control's SelectedValue is editable by the user or not. 
+            If TRUE the control renders as HTML select lists. If FALSE the control renders the DateTime value as text.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.Culture">
+            <summary>
+            Gets or Sets a reference to the Culture being used by the control. The Culture affects the display formats, month names, etc. 
+            By default the System.Threading.Thread.CurrentCulture is used.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.SelectedValue">
+            <summary>
+            Gets or sets the underlying System.Datetime value of the control. If the underlying System.Datetime value has not been set to a valid Datetime value, null is returned. Default value : null ( HasValue is FALSE by default )																																				  Default value : None ( HasValue is FALSE by default )
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.SelectedValueDataBinding">
+            <summary>
+            Use this property for databinding purposes. It is the equivalent to SelectedValue, boxed in Object, with robust parsing in the Setter."
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker._ValueRaw">
+            <summary>
+            Gets or sets the underlying System.Datetime value of the control. If the underlying System.Datetime value has not been set to a valid Datetime value, an Exception when this Property is accessed. Default value : None ( HasValue is FALSE by default )																																				  Default value : None ( HasValue is FALSE by default )
+            If the date is invalid, or has not been set, an exception will be thrown when this Property is accessed. Check the HasValue property to ascertain whether a valid date value exists before accessing this property.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.HasValue">
+            <summary>
+            Returns SelectedValue.HasValue.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.YearUpperBound">
+            <summary>
+            Gets or sets a System.Int32 value used by the DateTimePicker to determine the greatest year number to render in the year select list. 
+            Eg. If YearUpperBound is 50, and the current system year is 2002, then the greatest year the user will be able to select will be 2052 ( 2002 + 50 ).
+            Only applicable if a year element is part of the DisplayFormat.
+            Note that YearUpperBound must be greater than YearLowerBound.
+            The default value is 10.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.YearLowerBound">
+            <summary>
+            Gets or sets a System.Int32 value used by the DateTimePicker to determine the lowest year number to render in the year select list. 
+            Eg. If YearLowerBound is -100, and the current system year is 2002, then the lowest year the user will be able to select will be 1902 ( 2002 - 100 ).
+            Only applicable if a year element is part of the DisplayFormat.
+            Note that YearUpperBound must be greater than YearLowerBound.
+            The default value is -10.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.MinuteSecondGraduation">
+            <summary>
+            Gets or sets a System.Int32 value used to graduate the seconds drop down list (or minutes drop down list if seconds are not being used). E.g. Setting this property to 15 will cause only 00, 15, 30 and 45 minutes/seconds to display.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.DisplayFormat">
+            <summary>
+            Gets or sets a string value representing the display format of the DateTimePicker control. 
+            Common standard ( 1 character ) formats include : "d" - Short date, "D" - Long date, "t" - Short time, "T" - Long time.
+            Custom formats can be used as well, for example, "yyyy/MMM/dd", "HH:mm:ss", "hh:mm tt". 
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.TabIndex">
+            <summary>
+            Overridden from WebControl. Gets and sets the tab index of the control. Note that this results in a left-to-right tabbing behaviour within the DateTimePicker control regardless of the DisplayFormat used.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.BackColor">
+            <summary>
+            Overridden from WebControl. Gets or sets the background colour of the control. Note that this only applies to the background colour of the drop down lists, not the entire control area. 
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.BorderColor">
+            <summary>
+            Overridden from WebControl. This property is ignored as no browsers support border formatting of SELECT HTML Elements. Get always returns System.Drawing.Color.Empty. Set does nothing.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.BorderStyle">
+            <summary>
+            Overridden from WebControl. This property is ignored as no browsers support border formatting of SELECT HTML Elements. Get always returns System.Web.UI.WebControls.BorderStyle.NotSet. Set does nothing.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.BorderWidth">
+            <summary>
+            Overridden from WebControl. This property is ignored as no browsers support border formatting of SELECT HTML Elements. Get always returns System.Web.UI.WebControls.Unit. Set does nothing.
+            </summary>
+        </member>
+        <member name="T:Dune5.DateTimeUI.DateTimePicker.ValueChangedEventHandler">
+            <summary>
+            ValueChanged event handler delegate
+            </summary>
+        </member>
+        <member name="T:Dune5.DateTimeUI.DateTimePicker.GraduationOption">
+            <summary>
+            An enumeration to represent minute/second graduation options
+            </summary>
+        </member>
+        <member name="T:Dune5.DateTimeUI.DateTimePicker.InvalidMonthAndDayActionEnum">
+            <summary>
+            An enumeration indicating what action the control should take if an invalid month and day combination ( Eg 31 April ) is posted by the user.
+            </summary>
+        </member>
+        <member name="F:Dune5.DateTimeUI.DateTimePicker.InvalidMonthAndDayActionEnum.LeaveAsInvalid">
+            <summary>
+            Option LeaveAsInvalid does nothing and leaves HasValue = FALSE
+            </summary>
+        </member>
+        <member name="F:Dune5.DateTimeUI.DateTimePicker.InvalidMonthAndDayActionEnum.ChangeToLastDayOfMonth">
+            <summary>
+            Option ChangeToLastDayOfMonth would for example change 31 April to 30 April.
+            </summary>
+        </member>
+        <member name="F:Dune5.DateTimeUI.DateTimePicker.InvalidMonthAndDayActionEnum.TreatAsDateSerial">
+            <summary>
+            Option TreatAsDateSerial would for example change 31 April to 1 May.
+            </summary>
+        </member>
+        <member name="T:Dune5.DateTimeUI.DateTimePicker.ValueChangedEventArgs">
+            <summary>
+            Contains the new datetime SelectedValue of the control after postback, and the previous SelectedValue that the control had.
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.ValueChangedEventArgs.NewValue">
+            <summary>
+            Contains the new DateTime value of the control after postback
+            </summary>
+        </member>
+        <member name="P:Dune5.DateTimeUI.DateTimePicker.ValueChangedEventArgs.PreviousValue">
+            <summary>
+            Contains the previous SelectedValue that the control had. NB, If HasPreviousValue is false, this property will throw an exception. 
+            </summary>
+        </member>
+        <member name="T:Dune5.DateTimeUI.DateTimePicker.DisplayFormatDesignTimeEditor">
+            <summary>
+            Provides a Listbox pre-populated with valid DisplayFormat values to a design time host ( typically the Visual Studio class property editor ).
+            </summary>
+        </member>
+    </members>
+</doc>

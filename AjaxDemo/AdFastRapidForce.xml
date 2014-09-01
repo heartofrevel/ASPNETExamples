@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>1.gif</ImageUrl>
+    <AlternateText>Fast Rapid Force</AlternateText>
+    <NavigateUrl>http://www.yahoo.co.in</NavigateUrl>
+      <Impressions>5</Impressions>
+  </Ad>
+  <Ad>
+    <ImageUrl>6.jpg</ImageUrl>
+    <AlternateText>Fast Rapid Force</AlternateText>
+    <NavigateUrl>http://www.google.com</NavigateUrl>
+      <Impressions>1</Impressions>
+  </Ad>
+</Advertisements>
